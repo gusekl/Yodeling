@@ -37,7 +37,7 @@ export default function App() {
     data.forEach(row => {
       addUserScore(row.name, row.score, userScoresFromSheet)
     })
-    setUserScores(userScoresFromSheet)
+    setUserScores(sortUsers(userScoresFromSheet))
     toast({
       title: 'Scores added from excel',
       position: 'top',
